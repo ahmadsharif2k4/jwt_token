@@ -1,0 +1,10 @@
+﻿using JWT.Models;
+
+namespace JWT.Token
+{
+    public interface ITokenService
+    {
+        string BuildToken(string key, string issuer, UserDTO user);
+        bool ValidateToken(string key, string issuer, string audience, string token);
+    }
+}
